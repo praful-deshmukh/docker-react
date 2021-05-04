@@ -6,4 +6,4 @@ before_install:
   - docker build -t deshmup/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run deshmup/docker-react npm run test -- --coverage
+  - docker run -e CI=true deshmup/docker-react npm run test -- --coverage
